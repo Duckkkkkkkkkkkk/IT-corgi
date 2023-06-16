@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IT_Corgi</string>
+    <string name="sales_icon">Sales</string>
+    <string name="contacts_text">Контакты</string>
+    <string name="about_text">Про нас</string>
+    <string name="main_scene_text">Главное</string>
+    <string name="logo_of_app_1">IT-</string>
+    <string name="logo_of_app_2">Corgi</string>
+</resources>

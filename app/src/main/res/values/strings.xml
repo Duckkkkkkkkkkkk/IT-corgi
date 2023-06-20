@@ -6,4 +6,7 @@
     <string name="main_scene_text">Главное</string>
     <string name="logo_of_app_1">IT-</string>
     <string name="logo_of_app_2">Corgi</string>
+    <string name="course_start_date">Старт обучения:</string>
+    <string name="course_level">Уровень:</string>
+    <string name="course_decs">За программу вы изучите построение графических приложений под ПК, разработку веб сайтов на основе Java Spring Boot, изучите построение полноценных Андроид приложений и отлично изучите сам язык Джава!</string>
 </resources>

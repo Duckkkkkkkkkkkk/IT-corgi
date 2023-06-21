@@ -35,8 +35,8 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
     @NonNull
     @Override
     public CourseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View courseItem = LayoutInflater.from(context).inflate(R.layout.course_item, parent, false); // указываем дизайн
-        return new CourseAdapter.CourseViewHolder(courseItem); // указываем элементы, с которыми будем работать
+        View courseItems = LayoutInflater.from(context).inflate(R.layout.course_item, parent, false); // указываем дизайн
+        return new CourseAdapter.CourseViewHolder(courseItems); // указываем элементы, с которыми будем работать
     }
 
     @Override
@@ -53,13 +53,18 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, CoursePage.class);
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context, new Pair<View,String>(holder.courseImage, "courseImage"));
+
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context,
+                        new Pair<View,String>(holder.courseImage, "courseImage")
+                );
+
                 intent.putExtra("courseBg", Color.parseColor(courses.get(position).getColor()));
                 intent.putExtra("courseImage", imageId);
                 intent.putExtra("courseTitle",courses.get(position).getTitle());
                 intent.putExtra("courseDate", courses.get(position).getDate());
                 intent.putExtra("courseLevel", courses.get(position).getLevel());
                 intent.putExtra("courseText", courses.get(position).getText());
+                intent.putExtra("courseId", courses.get(position).getId());
 
                 context.startActivity(intent, options.toBundle());
             }

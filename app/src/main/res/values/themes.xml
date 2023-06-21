@@ -3,6 +3,7 @@
     <style name="Base.Theme.IT_Corgi" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActivityTransitions">true</item>
     </style>
 
     <style name="Theme.IT_Corgi" parent="Base.Theme.IT_Corgi" />

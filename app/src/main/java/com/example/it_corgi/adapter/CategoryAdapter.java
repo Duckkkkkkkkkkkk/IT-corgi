@@ -11,6 +11,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.it_corgi.MainActivity;
 import com.example.it_corgi.R;
 import com.example.it_corgi.model.Category;
 
@@ -34,6 +35,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
         holder.categoryTitle.setText(categories.get(position).getTitle()); // устанавливаем текст для поля categoryTitle
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.showCoursesByCategory(categories.get(position).getId());
+            }
+        });
     }
 
     @Override

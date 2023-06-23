@@ -20,6 +20,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:contentDescription="@string/sales_icon"
@@ -28,48 +29,48 @@
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/hot_deal" />
 
-        <TextView
-            android:id="@+id/contacts"
-            android:layout_width="100dp"
-            android:layout_height="145dp"
-            android:layout_marginBottom="120dp"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:rotation="-90"
-            android:text="@string/contacts_text"
-            android:textColor="@color/black"
-            android:textSize="20sp"
+        <ImageButton
+            android:id="@+id/main_scene_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="85dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="openMainPage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/major" />
+
+        <ImageButton
+            android:id="@+id/about_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:contentDescription="@string/app_name"
+            android:onClick="openAboutPage"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_scene_one"
+            app:srcCompat="@drawable/about" />
+
+        <ImageButton
+            android:id="@+id/contacts_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="88dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="openContactsPage"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/about"
-            android:layout_width="100dp"
-            android:layout_height="145dp"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:rotation="-90"
-            android:text="@string/about_text"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/contacts"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/main_scene"
-            android:layout_width="100dp"
-            android:layout_height="145dp"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:rotation="-90"
-            android:text="@string/main_scene_text"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/about"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about_one"
+            app:srcCompat="@drawable/contacts" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

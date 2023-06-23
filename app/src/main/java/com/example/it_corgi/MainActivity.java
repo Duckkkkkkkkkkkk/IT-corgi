@@ -52,6 +52,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, OrderPage.class);
         startActivity(intent);
     }
+    public void openAboutPage(View view) {
+        Intent intent1 = new Intent(this, About.class);
+        startActivity(intent1);
+    }
+
+    public void openContactsPage(View view) {
+        Intent intent2 = new Intent(this, Contacts.class);
+        startActivity(intent2);
+    }
+    public void openMainPage(View view) {
+        Intent intent3 = new Intent(this, MainActivity.class);
+        startActivity(intent3);
+    }
 
     private void setCourseRecycler(List<Course> courseList){
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);

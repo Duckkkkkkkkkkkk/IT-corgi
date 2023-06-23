@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">IT_Corgi</string>
     <string name="sales_icon">Sales</string>
-    <string name="contacts_text">Контакты</string>
-    <string name="about_text">Про нас</string>
-    <string name="main_scene_text">Главное</string>
     <string name="logo_of_app_1">IT-</string>
     <string name="logo_of_app_2">Corgi</string>
     <string name="course_start_date">Старт обучения:</string>
     <string name="course_level">Уровень:</string>
-    <string name="course_decs">За программу вы изучите построение графических приложений под ПК, разработку веб сайтов на основе Java Spring Boot, изучите построение полноценных Андроид приложений и отлично изучите сам язык Джава!</string>
+    <string name="course_decs">9-месячная программа обучения, во время которой ученик получает базовые знания алгоритмов, на практике освоит язык Java и сможет создавать универсальные программы для большинства современных платформ.</string>
+    <string name="telephone_o">8 800 576 45 78</string>
+    <string name="mail_o">it_corgi@mail.ru</string>
+    <string name="telegram_o">itcorgi_help</string>
+    <string name="text_about">Онлайн-школа программирования позволит погрузиться в IT-сферу, получить качественное образование, которое поможет стать продвинутым специалистом. Несмотря на удаленность обучения, налажен эффективный диалог, ведь существует персональный наставник, который ведет его на протяжении всего обучения. Сами же занятия проходят в форме вебинаров длительностью в 2-2,5 часа. Особенностями нашей онлайн-школы программирования являются искусственный интеллект IT-Corgi, который является помощником при выполнении заданий и система обучения, которая подстраивается под Ваши увлечения и интересы.</string>
 </resources>

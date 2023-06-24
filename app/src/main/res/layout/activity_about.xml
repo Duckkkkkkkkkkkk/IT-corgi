@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mainBgColor"
     tools:context=".About">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,8 +86,11 @@
         android:id="@+id/text_about"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
         android:fontFamily="@font/montserrat"
+        android:gravity="center"
         android:text="@string/text_about"
         android:textColor="@color/black"
         android:textSize="17sp"
@@ -101,10 +105,10 @@
         android:layout_marginStart="130dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toBottomOf="@+id/text_about"
-        app:layout_constraintVertical_bias="0.88"
+        app:layout_constraintVertical_bias="0.804"
         app:srcCompat="@drawable/dogy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

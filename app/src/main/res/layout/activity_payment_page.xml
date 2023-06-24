@@ -5,8 +5,8 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/name_of_app"
-    tools:context=".OrderPage">
+    android:background="@color/mainBgColor"
+    tools:context=".PaymentPage">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -16,6 +16,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Добавьте ваши изображения и кнопки здесь -->
 
         <ImageView
             android:id="@+id/imageView"
@@ -82,7 +84,7 @@
         android:layout_marginTop="48dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/logo_of_app_1"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toTopOf="parent" />
@@ -94,60 +96,99 @@
         android:layout_marginTop="48dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/logo_of_app_2"
-        android:textColor="@color/black"
+        android:textColor="@color/name_of_app"
         android:textSize="40sp"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/orders_list"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <ImageButton
-        android:id="@+id/payment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@android:color/transparent"
-        android:onClick="openPaymentPage"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/orders_list"
-        app:srcCompat="@drawable/payment3" />
-
-    <ImageButton
-        android:id="@+id/clearFullCart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:onClick="clearFullCart"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/payment"
-        app:layout_constraintTop_toBottomOf="@+id/orders_list"
-        app:srcCompat="@drawable/delete_cart3" />
-
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/orders_list"
+        app:layout_constraintBottom_toTopOf="@+id/imageView13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_white" />
+        app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/cardInfoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13">
+
+        <EditText
+            android:id="@+id/cardNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/round_border_for_edittext"
+            android:hint="Номер банковской карты"
+            android:inputType="number"
+            android:maxLength="16"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/expiryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_border_for_edittext"
+            android:hint="ММ/ГГ"
+            android:maxLength="5"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/CvcEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_border_for_edittext"
+            android:hint="CVC"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/CardHolderNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_border_for_edittext"
+            android:hint="Имя и фамилия на карте"
+            android:inputType="textCapCharacters|text"
+            android:maxLength="16"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/icon_girl" />
+
+    <ImageButton
+        android:id="@+id/to_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:onClick="to_pay"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/cardInfoLayout"
+        app:srcCompat="@drawable/to_pay" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

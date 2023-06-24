@@ -56,12 +56,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent1 = new Intent(this, About.class);
         startActivity(intent1);
     }
-
     public void openContactsPage(View view) {
         Intent intent2 = new Intent(this, Contacts.class);
         startActivity(intent2);
     }
-    public void openMainPage(View view) {
+    public void openMainPage(View view) { // мб надо удалить??? мб баги из-за этого
         Intent intent3 = new Intent(this, MainActivity.class);
         startActivity(intent3);
     }

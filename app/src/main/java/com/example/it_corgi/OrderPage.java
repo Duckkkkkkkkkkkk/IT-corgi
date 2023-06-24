@@ -3,6 +3,7 @@ import com.example.it_corgi.model.Course;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -42,6 +43,25 @@ public class OrderPage extends AppCompatActivity {
                 clearFullCart();
             }
         });
+    }
+
+    public void openPaymentPage(View view) {
+        Intent intent = new Intent(this, PaymentPage.class);
+        startActivity(intent);
+    }
+
+    public void openAboutPage(View view) {
+        Intent intent1 = new Intent(this, About.class);
+        startActivity(intent1);
+    }
+
+    public void openContactsPage(View view) {
+        Intent intent2 = new Intent(this, Contacts.class);
+        startActivity(intent2);
+    }
+    public void openMainPage(View view) {
+        Intent intent3 = new Intent(this, MainActivity.class);
+        startActivity(intent3);
     }
 
     public void clearFullCart() {

@@ -5,5 +5,5 @@
     <color name="mainBgColor">#F6F6F6</color> <!-- Цвет основного фона -->
     <color name="asideBgColor">#EAEAEA</color> <!-- Цвет фона боковой панели -->
     <color name="name_of_app">#DDA256</color> <!-- Цвет надписи Corgi-->
-    <color name="cartBgColor">#424345</color> <!-- Цвет надписи Corgi-->
+    <color name="cartBgColor">#424345</color>
 </resources>

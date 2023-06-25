@@ -20,6 +20,7 @@ public class OrderPage extends AppCompatActivity {
     private ListView orders_list;
     private ArrayAdapter<String> adapter;
     private List<String> coursesTitle = new ArrayList<>();
+    int total_price = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,11 @@ public class OrderPage extends AppCompatActivity {
 
         for(Course c : MainActivity.fullcourseList){
             if(Order.items_id.contains(c.getId()))
-                coursesTitle.add(c.getTitle());
+                coursesTitle.add(c.getTitle() + "          " + c.getPrice() + "р.");
+                total_price += Integer.parseInt (c.getPrice());
         }
+        TextView totalPriceTextView = findViewById(R.id.total_price);
+        totalPriceTextView.setText("Сумма: " + total_price + "р.");
 
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, coursesTitle);
         orders_list.setAdapter(adapter);
@@ -41,6 +45,9 @@ public class OrderPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 clearFullCart();
+                total_price = 0;
+                TextView totalPriceTextView1 = findViewById(R.id.total_price);
+                totalPriceTextView1.setText("Сумма: " + total_price + "р.");
             }
         });
     }

@@ -2,14 +2,15 @@ package com.example.it_corgi.model;
 
 public class Course {
     int id, category;
-    String img, title, date, level, color, text;
+    String img, title, date, level, price, color, text;
 
-    public Course(int id, String img, String title, String date, String level, String color, String text, int category) {
+    public Course(int id, String img, String title, String date, String level, String color, String text, int category, String price) {
         this.id = id;
         this.img = img;
         this.title = title;
         this.date = date;
         this.level = level;
+        this.price = price;
         this.color = color;
         this.text = text;
         this.category = category;
@@ -69,6 +70,13 @@ public class Course {
 
     public void setLevel(String level) {
         this.level = level;
+    }
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public String getColor() {

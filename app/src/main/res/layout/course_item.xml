@@ -49,17 +49,28 @@
                     android:textColor="@color/white"
                     android:fontFamily="@font/montserrat"
                     android:textSize="14sp"
-                    android:layout_margin="10dp"
+                    android:layout_margin="5dp"
                     android:text="@string/course_start_date" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat"
-                    android:textSize="14sp"
+                    android:layout_marginStart="0dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginStart="25dp"
-                    android:text="@string/course_level" />
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/course_level"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/course_price"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -82,7 +93,18 @@
                     android:fontFamily="@font/montserrat_bold"
                     android:textSize="14sp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="48dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/coursePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
                     android:text="@string/app_name" />
             </LinearLayout>
 

@@ -31,7 +31,6 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
         this.context = context;
         this.courses = courses;
     }
-
     @NonNull
     @Override
     public CourseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -48,6 +47,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
         holder.courseTitle.setText(courses.get(position).getTitle());
         holder.courseDate.setText(courses.get(position).getDate());
         holder.courseLevel.setText(courses.get(position).getLevel());
+        holder.coursePrice.setText(courses.get(position).getPrice());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +63,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
                 intent.putExtra("courseTitle",courses.get(position).getTitle());
                 intent.putExtra("courseDate", courses.get(position).getDate());
                 intent.putExtra("courseLevel", courses.get(position).getLevel());
+                intent.putExtra("coursePrice", courses.get(position).getPrice());
                 intent.putExtra("courseText", courses.get(position).getText());
                 intent.putExtra("courseId", courses.get(position).getId());
 
@@ -70,16 +71,14 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
             }
         });
     }
-
     @Override
     public int getItemCount() {
         return courses.size();
     }
-
     public static final class CourseViewHolder extends RecyclerView.ViewHolder{
         CardView courseBg;
         ImageView courseImage;
-        TextView courseTitle, courseDate, courseLevel;
+        TextView courseTitle, courseDate, courseLevel, coursePrice;
         public CourseViewHolder(@NonNull View itemView) {
             super(itemView);
             courseBg = itemView.findViewById(R.id.courseBg);
@@ -87,7 +86,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
             courseTitle = itemView.findViewById(R.id.courseTitle);
             courseDate = itemView.findViewById(R.id.courseDate);
             courseLevel = itemView.findViewById(R.id.courseLevel);
+            coursePrice = itemView.findViewById(R.id.coursePrice);
         }
     }
-
 }

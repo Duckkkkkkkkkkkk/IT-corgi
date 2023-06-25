@@ -133,10 +133,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="55dp"
+                    android:layout_marginStart="0dp"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/montserrat"
                     android:text="@string/course_level"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/course_price"
                     android:textColor="@color/white"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -159,12 +169,24 @@
                     android:id="@+id/coursePageLevel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/montserrat_bold"
                     android:text="@string/app_name"
                     android:textColor="@color/white"
                     android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/coursePagePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
             </LinearLayout>
 
         </LinearLayout>

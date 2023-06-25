@@ -5,6 +5,7 @@
     <string name="logo_of_app_2">Corgi</string>
     <string name="course_start_date">Старт обучения:</string>
     <string name="course_level">Уровень:</string>
+    <string name="course_price">Цена:</string>
     <string name="course_decs">9-месячная программа обучения, во время которой ученик получает базовые знания алгоритмов, на практике освоит язык Java и сможет создавать универсальные программы для большинства современных платформ.</string>
     <string name="telephone_o">8 800 576 45 78</string>
     <string name="mail_o">it_corgi@mail.ru</string>

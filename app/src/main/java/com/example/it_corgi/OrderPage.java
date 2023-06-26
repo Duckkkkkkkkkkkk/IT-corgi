@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.view.View;
 
 import com.example.it_corgi.model.Order;
@@ -30,9 +31,10 @@ public class OrderPage extends AppCompatActivity {
         orders_list = findViewById(R.id.orders_list);
 
         for(Course c : MainActivity.fullcourseList){
-            if(Order.items_id.contains(c.getId()))
+            if(Order.items_id.contains(c.getId())){
                 coursesTitle.add(c.getTitle() + "          " + c.getPrice() + "р.");
                 total_price += Integer.parseInt (c.getPrice());
+            }
         }
         TextView totalPriceTextView = findViewById(R.id.total_price);
         totalPriceTextView.setText("Сумма: " + total_price + "р.");

@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.example.it_corgi.model.Order;
 
 public class CoursePage extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +22,7 @@ public class CoursePage extends AppCompatActivity {
         TextView courseTitle = findViewById(R.id.coursePageTitle);
         TextView courseDate = findViewById(R.id.coursePageDate);
         TextView courseLevel = findViewById(R.id.coursePageLevel);
+        TextView coursePrice = findViewById(R.id.coursePagePrice);
         TextView courseText = findViewById(R.id.coursePageText);
 
         courseBg.setBackgroundColor(getIntent().getIntExtra("courseBg", 0));
@@ -30,14 +30,13 @@ public class CoursePage extends AppCompatActivity {
         courseTitle.setText(getIntent().getStringExtra("courseTitle"));
         courseDate.setText(getIntent().getStringExtra("courseDate"));
         courseLevel.setText(getIntent().getStringExtra("courseLevel"));
+        coursePrice.setText(getIntent().getStringExtra("coursePrice"));
         courseText.setText(getIntent().getStringExtra("courseText"));
     }
-
     public void addToCart (View view) {
         int item_id = getIntent().getIntExtra("courseId", 0);
         Order.items_id.add(item_id);
         Toast.makeText(this, "Добавлен в корзину!", Toast.LENGTH_LONG).show();
     }
-
 }
 
